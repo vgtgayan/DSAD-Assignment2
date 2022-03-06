@@ -17,31 +17,26 @@ Requirements:
 select the preparations to be funded and maximize PROFIT.
 2. Analyse the time complexity of your algorithm.
 3. Implement the above problem statement using Python 3.7
-4. 
+
 Sample Input:
 For example, if there are 10 different preparations in total and their fund requirements and values
 are given as shown:
-Preparations(i) Cost-Ci(lakhs) PROFIT(Pi)
-1 3 6
-2 1.7 3.5
-3 2 5.5
-4 1 4
-5 1.3 6.6
-6 1 2
-7 1.6 3.5
-8 2.5 5
-9 1.5 7
-10 1.8 1
-Input should be taken in through a file called “inputPS15.txt” which has the fixed format
-mentioned below using the “/” as a field separator:
-<Preparation Name i> / < Cost Ci(crores)> / < PROFIT Ri>
-Ex:
+
+Preparations(i)/Cost(lakhs)/PROFIT(lakhs)
 1 / 3 / 6
 2 / 1.7 / 3.5
 3 / 2 / 5.5
-…
+4 / 1 / 4
+5 / 1.3 / 6.6
+6 / 1 / 2
+7 / 1.6 / 3.5
+8 / 2.5 / 5
+9 / 1.5 / 7
+10 / 1.8 / 1
+
 Sample Output:
 The preparations that should be funded: 1,2,3,4,5,7,8,9
 Total PROFIT: 41.1
 Fund remaining: 0.4
+
 Display the output in outputPS15.txt.
