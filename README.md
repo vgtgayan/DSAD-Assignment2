@@ -24,19 +24,31 @@ are given as shown:
 
 Preparations(i)/Cost(lakhs)/PROFIT(lakhs)
 1 / 3 / 6
+
 2 / 1.7 / 3.5
+
 3 / 2 / 5.5
+
 4 / 1 / 4
+
 5 / 1.3 / 6.6
+
 6 / 1 / 2
+
 7 / 1.6 / 3.5
+
 8 / 2.5 / 5
+
 9 / 1.5 / 7
+
 10 / 1.8 / 1
+
 
 Sample Output:
 The preparations that should be funded: 1,2,3,4,5,7,8,9
+
 Total PROFIT: 41.1
+
 Fund remaining: 0.4
 
 Display the output in outputPS15.txt.
