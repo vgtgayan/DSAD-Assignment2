@@ -1,5 +1,5 @@
 # DSAD-Assignment2
-1. Problem Statement
+## 1. Problem Statement
 You have recently opened a fast-food joint in one of the most crowded markets of your city. Since
 the area is an expensive one, the shops are not too large and you have a tight fund to stick to.
 Through extensive research and surveys, you have identified certain preparations that might work in
@@ -12,17 +12,18 @@ with the fund constraints such that the total profit is maximized. If there are 
 same profit, choose the one which results in maximum utilization of funds and selection of
 preparations as well, as more variety in food is generally preferred.
 
-Requirements:
+## Requirements:
 1. Formulate an efficient recursive algorithm using Dynamic Programming to determine how to
 select the preparations to be funded and maximize PROFIT.
 2. Analyse the time complexity of your algorithm.
 3. Implement the above problem statement using Python 3.7
 
-Sample Input:
+### Sample Input:
 For example, if there are 10 different preparations in total and their fund requirements and values
 are given as shown:
 
 Preparations(i)/Cost(lakhs)/PROFIT(lakhs)
+
 1 / 3 / 6
 
 2 / 1.7 / 3.5
@@ -44,7 +45,7 @@ Preparations(i)/Cost(lakhs)/PROFIT(lakhs)
 10 / 1.8 / 1
 
 
-Sample Output:
+### Sample Output:
 The preparations that should be funded: 1,2,3,4,5,7,8,9
 
 Total PROFIT: 41.1
