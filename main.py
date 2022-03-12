@@ -50,13 +50,15 @@ class fastFoodJoint(object):
     def __init__(self, input_file, output_file):
         '''
 			1. Read the input file
+            2. Call get_optimum_preparations
+            3. Write to output file
 		'''
         
         # Read input file
         self.preperation_list, self.cost_list, self.profit_list= self.read_input_file(input_file)
-        print("Preperations: ", self.preperation_list)
-        print("Costs: ", self.cost_list)
-        print("Profits: ", self.profit_list)
+        # print("Preperations: ", self.preperation_list)
+        # print("Costs: ", self.cost_list)
+        # print("Profits: ", self.profit_list)
 
         # Available total fund (in lakhs)
         self.total_fund = 15
@@ -119,7 +121,7 @@ class fastFoodJoint(object):
             total_fund  - Maximum amount of fund available
 
         Outputs:
-            total_profit         - Total profit
+            total_profit         
             total_cost
             selected_preparation_list
         """
@@ -128,9 +130,9 @@ class fastFoodJoint(object):
             if n == 0 or total_fund == 0:
                 return 0,0,[]
 
-            # Case 0: b) (Base case) Previously solved sub problem
+            # Case 0: b) (Base case) Previously solved sub problem (Dynamic programming)
             # Get result from the memoization table
-            mem_key = f"{n}_{round(total_fund,2)}"
+            mem_key = f"{n}_{round(total_fund,1)}"
             if mem_key in self.mem_indices:
                 # print("Getting result from the memoization table. Key: ", mem_key)
                 mem_index = self.mem_indices.index(mem_key)
@@ -140,7 +142,7 @@ class fastFoodJoint(object):
             #         Skip nth preparation
             elif self.cost_list[n-1] > total_fund:
                 self.mem.append(self.get_optimum_preparations(n-1, total_fund))
-                self.mem_indices.append(f"{n}_{round(total_fund,2)}")
+                self.mem_indices.append(f"{n}_{round(total_fund,1)}")
                 return self.mem[-1]
 
             # Case 2: Cost of the nth preparation is less than or equal to current fund balance
@@ -180,7 +182,7 @@ class fastFoodJoint(object):
                 # self.mem[n][total_fund] =  (total_profit, total_cost, selected_preparation_list)
                 # return self.mem[n][total_fund]
                 self.mem.append((total_profit, total_cost, selected_preparation_list))
-                self.mem_indices.append(f"{n}_{round(total_fund,2)}")
+                self.mem_indices.append(f"{n}_{round(total_fund,1)}")
                 return self.mem[-1]
             
         except Exception as e:
